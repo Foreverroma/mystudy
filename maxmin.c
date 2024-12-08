@@ -4,19 +4,14 @@ void maxmin(int prob1, int prob2, int prob3, int *max, int *min);
 
 int main() {
     int x, y, z;
-    char ch;
-
-    if (scanf("%d%d%d%c", &x, &y, &z, &ch) != 4 || ch != '\n') {
+    char c;
+    if (scanf("%d%d%d%c", &x, &y, &z, &c) != 4 || c != '\n') {
         printf("n/a");
-        return 1;
+        return 0;
     }
-
     int max, min;
-
     maxmin(x, y, z, &max, &min);
-
     printf("%d %d", max, min);
-
     return 0;
 }
 
