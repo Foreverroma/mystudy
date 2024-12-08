@@ -1,18 +1,19 @@
 #!/bin/bash
 
-gcc -Wall -Wextra -Werror "$1"
+gcc -std=c11 -Wall -Wextra -Werror "$1" -lm
 if [ $? -ne 0 ]; then
 	echo "Compilation bad!"
+	exit 1
+else
+    echo "Compilation Good"
 fi
-echo "Compilation Good"
 
 clang-format -n "$1"
 if [ $? -ne 0 ]; then
-	clang-format -i "$1"
-	echo "Style correct"
+	echo "Style bad"
+	exit 1
+else
+    echo "Style Good!"
 fi
-echo "Style Good!"
 
 valgrind --leak-check=full ./a.out
-
-

@@ -42,8 +42,7 @@ int input(int *a, int *n) {
 void output(int *a, int n) {
     for (int *p = a; p - a < n; p++) {
         printf("%d", *p);
-        if (p - a + 1 < n)
-            printf(" ");
+        if (p - a + 1 < n) printf(" ");
     }
 }
 
