@@ -1,10 +1,9 @@
 #include <stdio.h>
 
 int main() {
-    float x;  // Значение x
-    float y;  // Значение y
+    float x;
+    float y;
     float c;
-    printf("Введите x y\n");
     scanf("%f %f", &x, &y);
     while ((c = getchar()) != '\n') {
         if (c < '0' || c > '9' || c != '-' || c != '.') {

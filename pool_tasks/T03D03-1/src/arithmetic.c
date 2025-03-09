@@ -10,11 +10,10 @@ int main() {
     int a;
     int b;
     int c;
-    printf("Введите два числа через пробел\n");
     scanf("%d %d", &a, &b);
     while ((c = getchar()) != '\n') {
         if (c < '0' || c > '9' || c != ' ' || c != '-') {
-            printf("Нужно вводить цифры, а не буквы");
+            printf("n/a");
             return 0;
         }
     }
@@ -25,7 +24,6 @@ int main() {
     segm(a, b);
     printf(" ");
     quot(a, b);
-    printf("\n");
     return 0;
 }
 
